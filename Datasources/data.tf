@@ -1,17 +1,20 @@
-data “aws_ami” “joindevops” {
-    most_recent = true
-    owners = [“973714476881”] # this info can be received from AWS ami’s section
-    
-    filter {
-        Name = “name”
-        Values = [“RHEL-9-Devops-Practice”]
-    }
-    filter {
-        Name = “root-device-type”
-        Values = [“EBS”]
-    } 
-    filter {
-        Name = “virtualization-type”
-        Values = [“hvm”]
-    }
+
+data "aws_ami" "joindevops" {
+  most_recent      = true
+  owners           = [973714476881]
+
+  filter {
+    name   = "name"
+    values = ["RHEL-9-DevOps-Practice"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
 }
