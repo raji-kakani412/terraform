@@ -45,7 +45,7 @@ variable "ingress_cidr_block"{
 }
 
 # preference of variables
-# 1.command line     use #terraform plan -var="<variable name>=value"
+# 1.command line   use #terraform plan -var="<variable name>=value"
 # 2.terraform.tfvars
 # 3.environment variable  for this use export TF_VAR_<variable name>= value then use terraform plan. 
 # To unset this ENVIRONMENT variable use unset TF_VAR_<variable name>
